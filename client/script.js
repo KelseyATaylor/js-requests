@@ -84,6 +84,12 @@ const ohMy = () => {
 		.get("http://localhost:3000/animals")
 		.then((res) => {
 			console.log(res.data);
+			// let ohMyArray = res.data;
+
+			// for (let i = 0; i < ohMyArray.length; i++) {
+			// 	let createP = document.createElement("p");
+			// 	createP.textContent = ohMyArray[i];
+			// }
 		})
 		.catch((error) => {
 			console.log(error);
@@ -208,3 +214,34 @@ document.getElementById("query-button").addEventListener("click", queryButton);
 */
 
 // CODE HERE
+
+// const createFood = (event) => {
+// 	event.preventDefault();
+
+// 	let foodInput = document.querySelector("input");
+// 	let list = document.querySelector("ul");
+// 	let body = {
+// 		newFood: foodInput.value,
+// 	};
+
+// 	axios
+// 		.post(`http://localhost:3000/food`, body)
+// 		.then((res) => {
+// 			console.log(res.data);
+
+// 			for (let i = 0; i < res.data.length; i++) {
+// 				let newPara = document.createElement("li");
+// 				newPara.textContent = res.data[i];
+// 				list.appendChild(newPara);
+// 			}
+
+// 			foodInput.value = "";
+// 		})
+// 		.catch((err) => {
+// 			console.log(err);
+// 		});
+// };
+
+// let foodListBtn = document.querySelector("#foodListBtn");
+
+// foodListBtn.addEventListener("click", createFood);
